@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Next.js
+.next/
+out/
+
+# Build
+dist/
+
+# Env files
+.env
+.env.local
+.env.*.local
+
+# Backups (スクリプトが生成するバックアップファイル)
+*.bak
+*.bak2
+
+# Script output (Wikidataから取得した中間ファイル)
+scripts/output/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
