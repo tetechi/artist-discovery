@@ -40,7 +40,7 @@ export function getCountriesForRegions(
       set.add(a.country);
     }
   }
-  return [...set].sort((a, b) => a.localeCompare(b, "ja"));
+  return Array.from(set).sort((a, b) => a.localeCompare(b, "ja"));
 }
 
 export function pickRandom<T>(arr: T[], count: number): T[] {
