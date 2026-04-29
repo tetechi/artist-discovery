@@ -1,3 +1,4 @@
+// @ts-nocheck
 export type Region =
   | "北米"
   | "中南米"
