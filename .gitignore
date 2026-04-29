@@ -24,6 +24,12 @@ scripts/output/
 .DS_Store
 Thumbs.db
 
+# PWA（ビルド時に自動生成）
+artist-app/public/sw.js
+artist-app/public/sw.js.map
+artist-app/public/workbox-*.js
+artist-app/public/workbox-*.js.map
+
 # Editor
 .vscode/
 .idea/

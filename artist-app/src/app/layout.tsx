@@ -4,6 +4,14 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Artist Discovery — 世界のアーティストと出会う",
   description: "国・ジャンル・年代でフィルタリングして、世界中のアーティストをランダムに発見しよう。",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Artist Discovery",
+  },
+  icons: {
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export const viewport: Viewport = {
