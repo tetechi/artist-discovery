@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     title: "Artist Discovery",
   },
   icons: {
+    icon: "/icon.svg",
     apple: "/apple-touch-icon.png",
   },
 };
