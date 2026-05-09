@@ -1,12 +1,19 @@
 import type { Metadata, Viewport } from "next";
+import { Anton } from "next/font/google";
 import "./globals.css";
+
+const anton = Anton({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-anton",
+});
 
 export const metadata: Metadata = {
   title: "Artist Discovery — 世界のアーティストと出会う",
   description: "国・ジャンル・年代でフィルタリングして、世界中のアーティストをランダムに発見しよう。",
   appleWebApp: {
     capable: true,
-    statusBarStyle: "default",
+    statusBarStyle: "black-translucent",
     title: "Artist Discovery",
   },
   icons: {
@@ -19,7 +26,7 @@ export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
   maximumScale: 1,
-  themeColor: "#f5f7fa",
+  themeColor: "#0b0b10",
 };
 
 export default function RootLayout({
@@ -29,7 +36,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <body>{children}</body>
+      <body className={anton.variable}>{children}</body>
     </html>
   );
 }

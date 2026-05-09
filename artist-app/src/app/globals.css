@@ -3,22 +3,29 @@
 @tailwind utilities;
 
 body {
-  background-color: #f5f7fa;
-  color: #111827;
+  /* ── ドットグリッド背景（明るい） ── */
+  background-color: #f0ece3;
+  background-image:
+    repeating-linear-gradient( 45deg, rgba(0,0,0,0.05) 0, rgba(0,0,0,0.05) 1px, transparent 0, transparent 50%),
+    repeating-linear-gradient(-45deg, rgba(0,0,0,0.05) 0, rgba(0,0,0,0.05) 1px, transparent 0, transparent 50%);
+  background-size: 40px 40px;
+  color: #1a1818;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  /* iOSでのタップハイライト無効化 */
   -webkit-tap-highlight-color: transparent;
 }
 
-/* iOS セーフエリア対応 */
 .pb-safe {
   padding-bottom: max(1.5rem, env(safe-area-inset-bottom));
 }
 
-/* スクロール慣性（iOS） */
 html {
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
+}
+
+.font-magazine {
+  font-family: var(--font-anton), "Impact", "Arial Black", sans-serif;
+  letter-spacing: -0.01em;
 }
 
 @keyframes fadeIn {
@@ -27,9 +34,9 @@ html {
 }
 
 @keyframes slideUp {
-  from { opacity: 0; transform: translateY(16px); }
+  from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
 .animate-fade-in  { animation: fadeIn  0.25s ease-out both; }
-.animate-slide-up { animation: slideUp 0.35s ease-out both; }
+.animate-slide-up { animation: slideUp 0.4s ease-out both; }
